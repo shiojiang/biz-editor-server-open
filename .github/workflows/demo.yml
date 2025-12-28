@@ -27,7 +27,7 @@ jobs:
           node -v
           npm -v
 
-    test2:
-      runs-on: ubuntu-latest
-      steps:
-        -run echo "test2"
+  test2:
+    runs-on: ubuntu-latest
+    steps:
+      - run: echo "test2"
