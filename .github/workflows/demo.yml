@@ -1,0 +1,33 @@
+# demo
+
+name: demo
+
+on:
+  push:
+    branches:
+      - main
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2 # 拉取代码 git pull  第三方的 actions
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v2 # 设置 node 环境
+        with:
+          node-version: '14'
+
+      - name: Install dependencies
+        run: npm install
+
+      - name: Print Node and Npm version
+        run: |
+          node -v
+          npm -v
+
+    test2:
+      runs-on: ubuntu-latest
+      steps:
+        -run echo "test2"
